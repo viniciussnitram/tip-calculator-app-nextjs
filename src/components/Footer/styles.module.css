@@ -1,0 +1,16 @@
+.footer {
+    background-color: var(--white);
+    color: var(--very-dark-cyan);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.a {
+    color: var(--strong-cyan);
+    text-decoration: none;
+}
+
+.a:hover {
+    border-bottom: 2px solid var(--strong-cyan);
+}
