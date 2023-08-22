@@ -1,0 +1,102 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 420px;
+}
+
+#bill {
+    background-image: url('/public/images/icon-dollar.svg');
+}
+
+#numberOfPeople {
+    background-image: url('/public/images/icon-person.svg');
+}
+
+#bill, #numberOfPeople {
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+}
+
+#bill:focus, #numberOfPeople:focus, #customTip:focus {
+    border: 2px solid var(--strong-cyan);
+}
+
+.input::placeholder {
+    color: var(--grayish-cyan);
+}
+
+.inputCustom::placeholder {
+    color: var(--dark-grayish-cyan);
+}
+
+.buttonsPercent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.buttonsPercentItem {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+}
+
+.buttonsPercentItem:hover {
+    background-color: var(--light-grayish-cyan);
+}
+
+.buttonsPercentItem:focus {
+    background-color: var(--strong-cyan);
+}
+
+.buttonsPercentItem:hover, .buttonsPercentItem:focus {
+    color: var(--very-dark-cyan);
+}
+
+.buttonsPercentItem, #customTip, #reset {
+    border: none;
+    border-radius: 5px;
+    height: 46px;
+    outline: none;
+    text-align: center;
+}
+
+.buttonsPercentItem, #customTip {
+    width: calc((100% - 30px) / 3); /* Mexer aqui */
+}
+
+.warning {
+    color: var(--red);
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 166.47px);
+}
+
+.warningInput {
+    border: 2px solid var(--red);
+}
+
+@media screen and (max-width: 970px) {
+    .form {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .form {
+        margin: auto;
+        width: 85%;
+    }
+
+    .buttonsPercentItem, #customTip {
+        width: calc((100% - 15px) / 2);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .warning {
+        display: block;
+        text-align: left;
+    }
+}
